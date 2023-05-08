@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+**Introduction**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Congratulations on making it to the coding interview for the frontend developer internship at StyleAI! In this task, you will be developing a 'styles' menu in the sidebar of a website editor. This menu will allow users to change the theme of their site within the editor. This documentation aims to provide you with all the necessary information to complete the task successfully.
 
-## Available Scripts
+**Task Overview**
 
-In the project directory, you can run:
+The task involves four main steps that you should follow to complete the task:
+- Initialize any state variables to manage the Editor theme (`pages/Editor.jsx`)
+- Implement the Sidebar styles menu (see Sidebar Implementation) (`components/editor/Sidebar/index.jsx` + any additional files)
+- Update the Site using the selected theme colors (`components/editor/Site/index.jsx`)
+- Store / Retrieve user's theme preferences using local storage (`pages/Editor.jsx` + any additional files)
 
-### `npm start`
+The files that you will be working on include:
+- `components/editor/Sidebar/index.jsx` (and any additional files needed)
+- `components/editor/Site/index.jsx`
+- `constants/siteThemes.js`
+- `pages/Editor.jsx`
+- `utils/…` (if you want to create any utility functions)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*Note: `styles/theme.js` is the global project theme, not the Editor theme. These colors should only be referenced when designing components. The Editor themes are in `constants/siteThemes.js`*.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Sidebar Implementation**
 
-### `npm test`
+Attached at the bottom of this document are mockups of the sidebar menu you will be implementing. Not all UX has been provided (animations, hover states, etc) on purpose. You are welcome to use the Framer Motion library for animations and MUI Icons for icons (both have already been added to package.json). 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Time Expectation**
 
-### `npm run build`
+This task is designed to take an experienced developer roughly 30-45 minutes. However, since you may not be familiar with the structure of this repository and our coding practices, you may need more time. It is totally okay if you take more time.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Resource Usage**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You are free to use any standard internet resources like StackOverflow or the ReactJS documentation, with the exception of language models like ChatGPT. If you use any external resource, please leave comments referencing where you got help from along the way.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Tips for Getting Started**
 
-### `npm run eject`
+Before getting started with the task, you should take the time to understand the repository's structure and coding practices. You can then proceed with the following steps:
+- Begin by creating any new state variables in `Editor.jsx` to manage the theme of the editor. This state variable should be initialized to the default theme. The Editor will be responsible for all state/data management.
+- Implement the 'styles' menu in the Sidebar component. The menu should display a list of available themes that the user can select from (see the attached mockups below). When a user selects a theme, the state variable you created in step 1 should be updated with the selected theme.
+- In the Site component, update the site to use the selected theme colors.
+- Finally, store the user's theme preferences using local storage in `Editor.jsx` (you may need to create some additional utility functions). You should retrieve the theme preference from local storage when the editor is opened and apply it to the editor theme state variable.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+If you encounter any issues or get stuck along the way, please reach out to your interviewer for assistance.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Conclusion**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This task is designed to test your ability to work with React components, manage state variables, and utilize local storage. We wish you the best of luck in completing this task and look forward to reviewing your work.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Mockups**
 
-## Learn More
+![Desktop - Editor](https://user-images.githubusercontent.com/37320248/236954495-03675128-f887-43cf-bace-368c8e7bda1f.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Sidebar Instructions](https://user-images.githubusercontent.com/37320248/236954508-bff79e20-af08-481a-b982-8300a3e240f2.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
