@@ -32,7 +32,7 @@ const SiteWrapper = styled(motion.div)`
   overflow: hidden;
   border: 1px solid ${theme.colors.black[40]};
   border-radius: 8px;
-  background-color: ${theme.colors.black[10]};
+  background-color: ${theme.colors.black[10]}; // Change to Primary color
   display: flex;
   align-items: center;
   justify-content: center;
