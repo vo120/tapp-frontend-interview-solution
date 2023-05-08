@@ -47,7 +47,7 @@ This task is designed to test your ability to work with React components, manage
 
 **Mockups**
 
-![Desktop - Editor](https://user-images.githubusercontent.com/37320248/236954495-03675128-f887-43cf-bace-368c8e7bda1f.png)
+![Desktop - Editor](https://user-images.githubusercontent.com/37320248/236958389-16c2afeb-76bc-404d-a643-5ecdb9301b50.png)
 
-![Sidebar Instructions](https://user-images.githubusercontent.com/37320248/236954508-bff79e20-af08-481a-b982-8300a3e240f2.png)
+![Sidebar Instructions](https://user-images.githubusercontent.com/37320248/236958398-d0deb063-51f8-4f13-b41c-ad8e28a10b09.png)
 
