@@ -49,7 +49,7 @@ function Site(props) {
       </SiteDescription>
       <DocLink
         target="_blank"
-        href="https://docs.google.com/document/d/1jdqVAkOswesPTY_hq5yH4JSotzFX15rNgfe832MS6sM/edit#"
+        href="https://github.com/tapp-ai/tapp-frontend-interview#readme"
       >
         Read Task Documentation
       </DocLink>
