@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { theme } from "../styles/theme";
 import Sidebar from "../components/editor/Sidebar";
 import Site from "../components/editor/Site";
+import { useEffect, useState } from "react";
+import { siteThemes } from "../constants/siteThemes";
 
 // Component Styles
 
@@ -45,14 +47,53 @@ const SideBarWrapper = styled(motion.div)`
 
 /** Root Editor View */
 function Editor() {
+  const [editorTheme, setEditorTheme] = useState(siteThemes.default);
+  useEffect(() => {
+    const currentTheme = localStorage.getItem("editorThemeColor");
+
+    if (currentTheme) {
+      setEditorTheme(siteThemes[currentTheme]);
+    } else {
+      setEditorTheme(siteThemes.default); // set default theme if no current theme in localStorage
+      localStorage.setItem("editorThemeColor", "default");
+    }
+  }, []);
+
+  //handling theme color change ex. primary, secondary, etc.
+  //takes in a theme like default, lavendar, etc. & changes the colors
+  const handleThemeChange = (theme) => {
+    setEditorTheme(siteThemes[theme]);
+    // console.log("in themes colors", siteThemes[theme]);
+    localStorage.setItem("editorThemeColor", theme);
+    // console.log("Theme changed to: ", theme);
+  };
+
+  // clean up local storage on page refresh
+  useEffect(() => {
+    window.addEventListener("beforeunload", () => {
+      localStorage.removeItem("editorThemeColor");
+    });
+  }, []);
+
   return (
     <Root>
       <RootContent>
-        <SiteWrapper layout>
-          <Site />
+        <SiteWrapper
+          layout
+          style={{
+            backgroundColor: editorTheme.primary,
+          }}
+        >
+          <Site
+            editorTheme={editorTheme}
+            handleThemeChange={handleThemeChange}
+          />
         </SiteWrapper>
         <SideBarWrapper layout>
-          <Sidebar />
+          <Sidebar
+            editorTheme={editorTheme}
+            handleThemeChange={handleThemeChange}
+          />
         </SideBarWrapper>
       </RootContent>
     </Root>
