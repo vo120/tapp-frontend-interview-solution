@@ -1,3 +1,9 @@
+**Vanessa's Solution**
+
+![Tapp_StyleAI_Complete_Solution](https://github.com/vo120/tapp-frontend-interview-solution/assets/88854148/3d71f652-c6b0-4fef-9df5-e276c93b19a2)
+
+![Tapp_StyleAI_Solution_LocalStorageDemo](https://github.com/vo120/tapp-frontend-interview-solution/assets/88854148/7cff647c-d0f0-4790-ad7b-4b1524687640)
+
 **Introduction**
 
 Congratulations on making it to the coding interview for the frontend developer internship at StyleAI! In this task, you will be developing a 'styles' menu in the sidebar of a website editor. This menu will allow users to change the theme of their site within the editor. This documentation aims to provide you with all the necessary information to complete the task successfully.
